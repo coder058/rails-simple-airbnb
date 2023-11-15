@@ -1,0 +1,16 @@
+<!-- app/views/flats/new.html.erb -->
+<h1>Add a New Flat</h1>
+
+<!-- app/views/flats/new.html.erb -->
+<h1>Add a New Flat</h1>
+<%= render 'form', flat: @flat %>
+
+
+<%= form_with model: @flat do |form| %>
+  <%= form.text_field :name %>
+  <%= form.text_field :address %>
+  <%= form.text_area :description %>
+  <%= form.number_field :price_per_night %>
+  <%= form.number_field :number_of_guests %>
+  <%= form.submit %>
+<% end %>
